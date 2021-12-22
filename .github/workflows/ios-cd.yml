@@ -6,9 +6,6 @@ on:
     
   workflow_dispatch:
 
-env:
-    cache-version: v1
-
 jobs:
   build:
     runs-on: macos-11
@@ -33,11 +30,20 @@ jobs:
           flutter-version: '2.5.0'
           channel: 'stable'
 
+      - name: cache pub
+        uses: actions/cache@v1
+        with:
+          path: /Users/runner/hostedtoolcache/flutter
+          key: ${{runner.OS}}-flutter-install-cache
+
+      - name: flutter dependencies install
+          run: flutter pub get
+
       - name: cache pods
         uses: actions/cache@v1
         with:
           path: ios/Pods
-          key: ${{ env.cache-version }}-${{ runner.os }}-pods-${{ hashFiles('**/ios/Podfile.lock') }}
+          key: ${{ runner.os }}-pods-${{ hashFiles('**/ios/Podfile.lock') }}
           restore-keys: |
             ${{ runner.os }}-pods-
 
@@ -47,9 +53,6 @@ jobs:
           cd ios/
           flutter pub get
           pod install
-
-      - name: flutter dependencies install
-        run: flutter pub get
 
 #      - name: build ipa
 #        run: flutter build ipa --export-options-plist=ExportOptions.plist
