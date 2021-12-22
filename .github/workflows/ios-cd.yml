@@ -48,5 +48,5 @@ jobs:
       - name: flutter dependencies install
         run: flutter pub get
 
-      - name: build ipa
-        run: flutter build ipa --export-options-plist=ExportOptions.plist
+#      - name: build ipa
+#        run: flutter build ipa --export-options-plist=ExportOptions.plist
