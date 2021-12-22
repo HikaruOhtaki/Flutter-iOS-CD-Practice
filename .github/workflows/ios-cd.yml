@@ -16,7 +16,7 @@ jobs:
       - name: import ProvisioningProfile
         run: |
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
-          echo -n ${{ secrets.PROVISIONING_PROFILE }} | base64 -d > ~/Library/MobileDevice/Provisioning\ Profiles/ugokuotoehonappstore.mobileprovision
+          echo -n ${{ secrets.PROVISIONING_PROFILE }} | base64 -d > ~/Library/MobileDevice/Provisioning\ Profiles/flutter-ios-cd-practice-app-store.mobileprovision
 
       - name: import Code-Signing Certificates
         uses: Apple-Actions/import-codesign-certs@v1
@@ -54,5 +54,5 @@ jobs:
           flutter pub get
           pod install
 
-#      - name: build ipa
-#        run: flutter build ipa --export-options-plist=ExportOptions.plist
+      - name: build ipa
+        run: flutter build ipa --export-options-plist=ExportOptions.plist
