@@ -6,6 +6,9 @@ on:
     
   workflow_dispatch:
 
+  env:
+    cache-version: v1
+
 jobs:
   build:
     runs-on: macos-11
@@ -34,7 +37,7 @@ jobs:
         uses: actions/cache@v1
         with:
           path: ios/Pods
-          key: ${{ runner.os }}-pods-${{ hashFiles('**/ios/Podfile.lock') }}
+          key: ${{ env.cache-version }}-${{ runner.os }}-pods-${{ hashFiles('**/ios/Podfile.lock') }}
           restore-keys: |
             ${{ runner.os }}-pods-
 
