@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>399103973640-17tu64s3dhertuo54avrgdjr5f8tduoo.apps.googleusercontent.com</string>
+	<string>399103973640-6b45oui6m2nltiq3nbn2eq2rqsot63rl.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.399103973640-17tu64s3dhertuo54avrgdjr5f8tduoo</string>
+	<string>com.googleusercontent.apps.399103973640-6b45oui6m2nltiq3nbn2eq2rqsot63rl</string>
 	<key>API_KEY</key>
 	<string>AIzaSyCGzP2isre3VQnw-jLs08aB2sZ9iRz19rs</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.example.flutterIosCdPractice</string>
+	<string>com.ohtakihikaru.flutterIosCdPractice</string>
 	<key>PROJECT_ID</key>
 	<string>flutter-ios-cd-practice</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:399103973640:ios:7151f386e311a73ec1f4bd</string>
+	<string>1:399103973640:ios:197264d70534c132c1f4bd</string>
 </dict>
 </plist>
