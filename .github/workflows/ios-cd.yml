@@ -37,7 +37,7 @@ jobs:
           key: ${{runner.OS}}-flutter-install-cache
 
       - name: flutter dependencies install
-          run: flutter pub get
+        run: flutter pub get
 
       - name: cache pods
         uses: actions/cache@v1
